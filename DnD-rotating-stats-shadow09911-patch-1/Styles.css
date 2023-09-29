@@ -1,0 +1,41 @@
+/* Add this to your CSS file (styles.css) */
+body {
+  background-color: #00FF00; /* Set the background color for the entire page to green (#00FF00) */
+  margin: 0; /* Remove default body margin */
+  padding: 0; /* Remove default body padding */
+}
+
+.widget-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally within the container */
+}
+
+.stats-display {
+  display: flex;
+  flex-wrap: wrap; /* Allow stats to wrap into two columns */
+  justify-content: center; /* Center stats horizontally within the container */
+  width: 10%; /* Ensure the stats container takes up the full width */
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+  list-style-type: none; /* Remove list item bullet points if applicable */
+}
+
+#name {
+  /* Make the "Name" section span both columns */
+  width: 100%;
+  text-align: center;
+}
+
+.stats-display p {
+  /* Adjust the width to make the boxes smaller and create two columns */
+  width: 50%; /* Half of the container width */
+  box-sizing: border-box; /* Include padding and border in the width */
+  text-align: center; /* Center the text horizontally */
+  margin: 0; /* Remove any margin */
+  padding: 5px;
+  font-family: Lucida Handwriting, cursive;
+  font-size: 24px;
+  font-weight: bold; /* Make the text bold */
+  color: black; /* Set the text color to black */
+}

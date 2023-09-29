@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Contents</title>
+    <link rel="stylesheet">
+</head>
+<body>
+    <div class="widget-container">
+        <h1>Character Contents</h1>
+        <div>
+            <button id="load-template-button">Upload Template</button>
+            <input type="file" id="template-file" accept=".json">
+            <button id="download-data-button">Download Data</button>
+            <button id="delete-data-button">Delete Data</button> <!-- Add this button -->
+        </div>
+        <table id="character-table">
+            <thead>
+                <tr>
+                    <th>NAME</th>
+                    <th>HP</th>
+                    <th>AC</th>
+                    <th>STR</th>
+                    <th>DEX</th>
+                    <th>CON</th>
+                    <th>INT</th>
+                    <th>WIS</th>
+                    <th>CHA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Character data will be populated here -->
+            </tbody>
+        </table>
+        <button id="add-character-button">Add Character</button>
+    </div>
+
+    <!-- Include individual JavaScript files for each functionality -->
+    <script src="Scriptv2.js"></script>
+    <script src="upload.js"></script>
+    <script src="download.js"></script>
+    <script src="characterManipulation.js"></script>
+    <script src="navigation.js"></script>
+    <script>
+        // Add an event listener to the "Delete Data" button
+        const deleteDataButton = document.getElementById('delete-data-button');
+        deleteDataButton.addEventListener('click', function() {
+            // Clear the 'characters' data in localStorage
+            localStorage.removeItem('characters');
+            // Optionally, you can also reset any UI or display related to the data
+            // For example, clear the character table or update the UI accordingly.
+            // Call the function or code to reset your UI here if needed.
+        });
+    </script>
+</body>
+</html>
